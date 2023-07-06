@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/w"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:textSize="37sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:layout_marginTop="180dp"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="are you..." />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="270dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        android:id="@+id/medtlandlord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A LANDLORD" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:textSize="37dp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:layout_marginTop="330dp"
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or" />
+
+    <TextView
+        android:id="@+id/medttenant"
+        android:layout_marginTop="420dp"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A TENANT" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="283dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="110dp"
+        android:layout_marginTop="60dp"
+        android:text="Welcome"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="311dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        app:srcCompat="@drawable/iccover" />
+</RelativeLayout>

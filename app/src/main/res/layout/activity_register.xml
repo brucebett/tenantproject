@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:textSize="40dp"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER HERE" />
+
+
+
+    <EditText
+        android:id="@+id/medtenterpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:textSize="20sp"
+        android:hint="Enter Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/medtemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:text="Enter Email" />
+
+    <TextView
+        android:id="@+id/medttextviewlogin"
+        android:layout_centerHorizontal="true"
+        android:textSize="23sp"
+        android:layout_marginTop="500dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an Account?..LOGIN" />
+
+    <EditText
+        android:id="@+id/medtconfirmpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="310dp"
+        android:hint="Confirm Password"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/mbtncreate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="410dp"
+        android:textSize="20sp"
+        android:background="@color/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREATE ACCOUNT" />
+</RelativeLayout>
