@@ -1,5 +1,6 @@
 package com.example.tenantfinderapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.SearchView
 import android.widget.Toast
@@ -16,6 +17,7 @@ class SearchhousesActivity : AppCompatActivity() {
     private val mList = ArrayList<HousesData>()
     private lateinit var adapter: HouseAdapter
     lateinit var houses : Array<String>
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +51,7 @@ class SearchhousesActivity : AppCompatActivity() {
         if (query!= null ){
             val filteredList = ArrayList<HousesData>()
             for (i in mList) {
-                if (i.title.toLowerCase(Locale.ROOT).contains(query)) {
+                if (i.title?.toLowerCase(Locale.ROOT)?.contains(query) == true) {
                     filteredList.add(i)
                 }
             }
@@ -86,5 +88,12 @@ class SearchhousesActivity : AppCompatActivity() {
             getString(R.string.house_9),
             getString(R.string.house_10),
         )
+
+        adapter.onItemclick = {
+            val intent = Intent(this , HouseActivity::class.java)
+            intent.putExtra("HousesData",it)
+
+            startActivity(intent)
+        }
     }
 }

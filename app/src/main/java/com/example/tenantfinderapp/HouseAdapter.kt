@@ -10,7 +10,8 @@ import com.example.tenantfifnderapp.R
 
 class HouseAdapter(var mlist:List<HousesData>) :
     RecyclerView.Adapter<HouseAdapter.HousesViewholder>(){
-    inner class HousesViewholder(itemView:View) : RecyclerView.ViewHolder(itemView){
+    var onItemclick : ((HousesData) -> Unit)? = null
+     class HousesViewholder(itemView:View) : RecyclerView.ViewHolder(itemView){
         val image:ImageView = itemView.findViewById(R.id.imghouse)
         val titletv:TextView = itemView.findViewById(R.id.title)
 
@@ -31,7 +32,15 @@ class HouseAdapter(var mlist:List<HousesData>) :
     }
 
     override fun onBindViewHolder(holder: HousesViewholder, position: Int) {
+        val HousesData = mlist[position]
         holder.image.setImageResource(mlist[position].image)
         holder.titletv.text = mlist[position].title
+        holder.itemView.setOnClickListener {
+            onItemclick?.invoke(HousesData)
+        }
     }
 }
+
+
+
+
