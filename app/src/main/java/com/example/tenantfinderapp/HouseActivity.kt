@@ -10,7 +10,7 @@ class HouseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_house)
-        var houses = intent.getParcelableExtra<HousesData>("title")
+        var houses = intent.getParcelableExtra<Houses>("title")
         if (houses != null){
             val textView : TextView = findViewById(R.id.houseActivityTv)
             val imageView : ImageView = findViewById(R.id.houseActivityIv)

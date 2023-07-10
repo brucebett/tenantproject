@@ -8,16 +8,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tenantfifnderapp.R
 
-class HouseAdapter(var mlist:List<HousesData>) :
+class HouseAdapter(var mlist:List<Houses>) :
     RecyclerView.Adapter<HouseAdapter.HousesViewholder>(){
-    var onItemclick : ((HousesData) -> Unit)? = null
+    var onItemclick : ((Houses) -> Unit)? = null
      class HousesViewholder(itemView:View) : RecyclerView.ViewHolder(itemView){
         val image:ImageView = itemView.findViewById(R.id.imghouse)
         val titletv:TextView = itemView.findViewById(R.id.title)
 
     }
 
-    fun setFilteredList(mlist: List<HousesData>){
+    fun setFilteredList(mlist: List<Houses>){
         this.mlist = mlist
         notifyDataSetChanged()
     }

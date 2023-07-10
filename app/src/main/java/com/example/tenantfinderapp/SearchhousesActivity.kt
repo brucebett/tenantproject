@@ -14,7 +14,7 @@ class SearchhousesActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var searchView: SearchView
-    private val mList = ArrayList<HousesData>()
+    private val mList = ArrayList<Houses>()
     private lateinit var adapter: HouseAdapter
     lateinit var houses : Array<String>
 
@@ -49,7 +49,7 @@ class SearchhousesActivity : AppCompatActivity() {
 
     private fun filterList(query : String?) {
         if (query!= null ){
-            val filteredList = ArrayList<HousesData>()
+            val filteredList = ArrayList<Houses>()
             for (i in mList) {
                 if (i.title?.toLowerCase(Locale.ROOT)?.contains(query) == true) {
                     filteredList.add(i)
@@ -65,16 +65,16 @@ class SearchhousesActivity : AppCompatActivity() {
 
 
     private fun addDataToList(){
-    mList.add(HousesData("Bedsiter available @Ksh 5000/= located along Waiyaki way,MountainView",R.drawable.img1))
-    mList.add(HousesData("Spacious Houses available @9Ksh 9000/= located at Kangemi",R.drawable.img2))
-    mList.add(HousesData("House available @Ksh 10000/= located at Kawangare",R.drawable.img3))
-    mList.add(HousesData("House available @Ksh 15000/= located along Naivasha Road",R.drawable.img4))
-    mList.add(HousesData("Houses for sell available @Ksh 100000/=negotiable located at Dandora",R.drawable.img5))
-    mList.add(HousesData("Affordable Houses available @Ksh 2500/= located at south B",R.drawable.img6))
-    mList.add(HousesData("Houses with spacious parking available @Ksh 26000/= located at Uthiri",R.drawable.img7))
-    mList.add(HousesData("Houses for sell available @Ksh 500000/= located at Dagoreti",R.drawable.img8))
-    mList.add(HousesData("spacious Houses available @Ksh 250000/= located at Ruiru",R.drawable.img9))
-    mList.add(HousesData("House for sell available @Ksh 2500000/= located at Thika",R.drawable.img10))
+    mList.add(Houses("Bedsiter available @Ksh 5000/= located along Waiyaki way,MountainView",R.drawable.img1))
+    mList.add(Houses("Spacious Houses available @9Ksh 9000/= located at Kangemi",R.drawable.img2))
+    mList.add(Houses("House available @Ksh 10000/= located at Kawangare",R.drawable.img3))
+    mList.add(Houses("House available @Ksh 15000/= located along Naivasha Road",R.drawable.img4))
+    mList.add(Houses("Houses for sell available @Ksh 100000/=negotiable located at Dandora",R.drawable.img5))
+    mList.add(Houses("Affordable Houses available @Ksh 2500/= located at south B",R.drawable.img6))
+    mList.add(Houses("Houses with spacious parking available @Ksh 26000/= located at Uthiri",R.drawable.img7))
+    mList.add(Houses("Houses for sell available @Ksh 500000/= located at Dagoreti",R.drawable.img8))
+    mList.add(Houses("spacious Houses available @Ksh 250000/= located at Ruiru",R.drawable.img9))
+    mList.add(Houses("House for sell available @Ksh 2500000/= located at Thika",R.drawable.img10))
 
         houses = arrayOf(
             getString(R.string.house_1),
