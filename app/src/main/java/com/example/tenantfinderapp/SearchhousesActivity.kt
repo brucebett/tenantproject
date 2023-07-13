@@ -76,18 +76,6 @@ class SearchhousesActivity : AppCompatActivity() {
     mList.add(Houses("spacious Houses available @Ksh 250000/= located at Ruiru",R.drawable.img9))
     mList.add(Houses("House for sell available @Ksh 2500000/= located at Thika",R.drawable.img10))
 
-        houses = arrayOf(
-            getString(R.string.house_1),
-            getString(R.string.house_2),
-            getString(R.string.house_3),
-            getString(R.string.house_4),
-            getString(R.string.house_5),
-            getString(R.string.house_6),
-            getString(R.string.house_7),
-            getString(R.string.house_8),
-            getString(R.string.house_9),
-            getString(R.string.house_10),
-        )
 
         adapter.onItemclick = {
             val intent = Intent(this , HouseActivity::class.java)
